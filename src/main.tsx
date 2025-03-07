@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import LandingPage from "./ui/LandingPage.tsx";
+import LandingPage from "./ui/landing-page/LandingPage.tsx";
 import { BrowserRouter, Route, Routes } from "react-router";
 
 createRoot(document.getElementById("root")!).render(
