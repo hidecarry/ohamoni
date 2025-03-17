@@ -8,7 +8,7 @@ export default function LoginPage() {
         <div className="mx-auto w-full max-w-sm">
           <div className="flex flex-col items-center space-y-2 text-center">
             <AlarmClock className="h-8 w-8 text-blue-600" />
-            <h1 className="text-2xl font-bold">おはよう日記</h1>
+            <h1 className="text-2xl font-bold">{import.meta.env.VITE_SITE_TITLE}</h1>
             <p className="text-sm text-gray-500">アカウントにログイン</p>
           </div>
           <div className="mt-8">
