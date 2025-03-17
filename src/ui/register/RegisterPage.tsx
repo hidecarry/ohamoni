@@ -15,7 +15,7 @@ export default function RegisterPage() {
             <div className="space-y-4">
               <div className="space-y-2">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                  お名前
+                  ニックネーム
                 </label>
                 <input
                   id="name"
