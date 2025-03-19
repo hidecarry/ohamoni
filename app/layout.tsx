@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geistSans = Geist({
@@ -15,7 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || "https://ohamoni.com"),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "https://ohamoni.com"
+  ),
   title: process.env.NEXT_PUBLIC_SITE_TITLE,
   description:
     "起床時間の記録と日記をシンプルに一つのアプリで。あなたの生活リズムを整え、日々の思い出を残しましょう。無料で始められる早起き習慣化アプリ。",
