@@ -24,26 +24,11 @@ export default function LoginPage() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                    パスワード
-                  </label>
-                  <Link href="/forgot-password" className="text-xs text-blue-600 hover:underline">
-                    パスワードをお忘れですか？
-                  </Link>
-                </div>
-                <input
-                  id="password"
-                  type="password"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
-              </div>
               <button
                 type="submit"
                 className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
-                ログイン
+                ログインリンクを送信
               </button>
             </div>
             <div className="mt-4 text-center text-sm">
