@@ -1,101 +1,248 @@
-import Image from "next/image";
+import { AlarmClock, Book, Calendar, ChevronRight } from "lucide-react"
+import Link from "next/link"
 
 export default function Home() {
-  console.log("Hello, world!");
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex min-h-screen flex-col bg-white">
+      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+        <div className="container mx-auto px-4 flex h-16 items-center justify-between">
+          <div className="flex items-center gap-2">
+            <AlarmClock className="h-6 w-6 text-blue-600" />
+            <span className="text-xl font-bold">おはよう日記</span>
+          </div>
+          <nav className="hidden md:flex gap-6">
+            <Link href="#features" className="text-sm font-medium hover:text-blue-600">
+              機能
+            </Link>
+            <Link href="#how-it-works" className="text-sm font-medium hover:text-blue-600">
+              使い方
+            </Link>
+            <Link href="#testimonials" className="text-sm font-medium hover:text-blue-600">
+              ユーザーの声
+            </Link>
+          </nav>
+          <div className="flex items-center gap-4">
+            <Link href="/login">
+              <button className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50">
+                ログイン
+              </button>
+            </Link>
+            <Link href="/register">
+              <button className="px-4 py-2 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700">
+                無料登録
+              </button>
+            </Link>
+          </div>
         </div>
+      </header>
+      <main className="flex-1">
+        <section className="container mx-auto px-4 py-24 md:py-32">
+          <div className="grid gap-10 md:grid-cols-2 md:gap-16">
+            <div className="flex flex-col justify-center space-y-6">
+              <div className="space-y-2">
+                <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+                  起床時間を記録して、
+                  <br />
+                  毎日を大切に
+                </h1>
+                <p className="text-xl text-gray-500">
+                  起床時間の記録と日記をシンプルに一つのアプリで。あなたの生活リズムを整え、日々の思い出を残しましょう。
+                </p>
+              </div>
+              <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <Link href="/register">
+                  <button className="w-full min-[400px]:w-auto px-6 py-3 bg-blue-600 text-white rounded-md text-sm font-medium hover:bg-blue-700 flex items-center justify-center">
+                    今すぐ始める
+                    <ChevronRight className="ml-2 h-4 w-4" />
+                  </button>
+                </Link>
+                <Link href="#how-it-works">
+                  <button className="w-full min-[400px]:w-auto px-6 py-3 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50">
+                    詳しく見る
+                  </button>
+                </Link>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="relative h-[350px] w-[350px] sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px]">
+                <img
+                  src="/placeholder.svg?height=450&width=450"
+                  alt="おはよう日記アプリのイメージ"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" className="bg-gray-100 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">主な機能</h2>
+              <p className="mt-4 text-xl text-gray-500">シンプルで使いやすい機能で、あなたの毎日をサポートします</p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="mb-4 rounded-full bg-blue-100 p-3 w-fit">
+                  <AlarmClock className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold">起床時間の記録</h3>
+                <p className="mt-2 text-gray-500">
+                  毎日の起床時間を簡単に記録。グラフやカレンダーで傾向を確認できます。
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="mb-4 rounded-full bg-blue-100 p-3 w-fit">
+                  <Book className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold">日記機能</h3>
+                <p className="mt-2 text-gray-500">その日あったことや感じたことを記録。写真も添付できます。</p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="mb-4 rounded-full bg-blue-100 p-3 w-fit">
+                  <Calendar className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold">統計と分析</h3>
+                <p className="mt-2 text-gray-500">
+                  睡眠パターンを分析し、より良い生活リズムのためのアドバイスを提供します。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">使い方</h2>
+              <p className="mt-4 text-xl text-gray-500">シンプルな3ステップで始められます</p>
+            </div>
+            <div className="grid gap-10 md:grid-cols-3">
+              <div className="flex flex-col items-center text-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white mb-4">
+                  1
+                </div>
+                <h3 className="text-xl font-bold">アカウント作成</h3>
+                <p className="mt-2 text-gray-500">
+                  メールアドレスで簡単に登録できます。SNSアカウントでのログインも可能です。
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white mb-4">
+                  2
+                </div>
+                <h3 className="text-xl font-bold">起床時間を記録</h3>
+                <p className="mt-2 text-gray-500">
+                  朝起きたら、ワンタップで起床時間を記録。習慣化すれば自動的に記録することも可能です。
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-600 text-white mb-4">
+                  3
+                </div>
+                <h3 className="text-xl font-bold">日記を書く</h3>
+                <p className="mt-2 text-gray-500">その日の出来事や感想を記録。短い一言でも、長文でも自由に書けます。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="testimonials" className="bg-gray-100 py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">ユーザーの声</h2>
+              <p className="mt-4 text-xl text-gray-500">実際に使っている方々からの感想</p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <span className="font-bold text-blue-600">T.K</span>
+                  </div>
+                  <div>
+                    <p className="font-bold">田中 健太</p>
+                    <p className="text-sm text-gray-500">会社員 / 32歳</p>
+                  </div>
+                </div>
+                <p className="text-gray-500">
+                  「朝型の生活に切り替えたくて使い始めました。起床時間を記録するのが習慣になり、自然と早起きできるようになりました。日記も続けられて一石二鳥です。」
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <span className="font-bold text-blue-600">Y.M</span>
+                  </div>
+                  <div>
+                    <p className="font-bold">山田 美咲</p>
+                    <p className="text-sm text-gray-500">学生 / 22歳</p>
+                  </div>
+                </div>
+                <p className="text-gray-500">
+                  「授業の前に早起きする習慣をつけたかったので使っています。グラフで起床時間の変化が見られるのがモチベーションになります。日記も短く書けるので続けやすいです。」
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-sm">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <span className="font-bold text-blue-600">S.K</span>
+                  </div>
+                  <div>
+                    <p className="font-bold">佐藤 健一</p>
+                    <p className="text-sm text-gray-500">フリーランス / 41歳</p>
+                  </div>
+                </div>
+                <p className="text-gray-500">
+                  「在宅勤務で生活リズムが崩れがちでしたが、このアプリのおかげで規則正しい生活に戻れました。日記を書く習慣も身につき、毎日の振り返りができるようになりました。」
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="rounded-lg bg-blue-600 p-8 md:p-12 lg:p-16">
+              <div className="mx-auto max-w-3xl text-center">
+                <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">
+                  今日から始めましょう
+                </h2>
+                <p className="mt-4 text-xl text-white/90">起床時間の記録と日記をつけることで、より充実した毎日を。</p>
+                <div className="mt-8">
+                  <Link href="/register">
+                    <button className="px-6 py-3 bg-white text-blue-600 rounded-md text-sm font-medium hover:bg-gray-100 w-full sm:w-auto">
+                      無料で始める
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer className="border-t py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+            <div className="flex items-center gap-2">
+              <AlarmClock className="h-6 w-6 text-blue-600" />
+              <span className="text-xl font-bold">おはよう日記</span>
+            </div>
+            <nav className="flex gap-6">
+              <Link href="#" className="text-sm font-medium hover:text-blue-600">
+                利用規約
+              </Link>
+              <Link href="#" className="text-sm font-medium hover:text-blue-600">
+                プライバシーポリシー
+              </Link>
+              <Link href="#" className="text-sm font-medium hover:text-blue-600">
+                お問い合わせ
+              </Link>
+            </nav>
+            <div className="text-sm text-gray-500">
+              &copy; {new Date().getFullYear()} おはよう日記 All rights reserved.
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );
