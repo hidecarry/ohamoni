@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function LandingPage() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col bg-white">
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container mx-auto px-4 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
@@ -111,7 +111,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="how-it-works" className="py-20">
+        <section id="how-it-works" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">使い方</h2>
@@ -220,7 +220,7 @@ export default function LandingPage() {
           </div>
         </section>
       </main>
-      <footer className="border-t py-12">
+      <footer className="border-t py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div className="flex items-center gap-2">
