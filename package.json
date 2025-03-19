@@ -1,33 +1,35 @@
 {
-  "name": "ohamoni",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.0.11",
-    "lucide-react": "^0.477.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router": "^7.3.0",
-    "tailwindcss": "^4.0.11"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.21.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.21.0",
-    "eslint-plugin-react-hooks": "^5.1.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^15.15.0",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
-  }
+	"name": "ohamoni",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"pages:build": "yarn next-on-pages",
+		"preview": "yarn pages:build && wrangler pages dev",
+		"deploy": "yarn pages:build && wrangler pages deploy",
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts"
+	},
+	"dependencies": {
+		"next": "15.2.1",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@cloudflare/next-on-pages": "1",
+		"@cloudflare/workers-types": "^4.20250317.0",
+		"@eslint/eslintrc": "^3",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"eslint": "^9",
+		"eslint-config-next": "15.2.1",
+		"tailwindcss": "^4",
+		"typescript": "^5",
+		"vercel": "^41.4.1",
+		"wrangler": "^4.1.0"
+	}
 }
