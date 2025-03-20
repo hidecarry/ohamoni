@@ -9,9 +9,12 @@
 		"lint": "next lint",
 		"deploy": "opennextjs-cloudflare && wrangler deploy",
 		"preview": "opennextjs-cloudflare && wrangler dev",
-		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+		"migrate:prod": "npx wrangler d1 migrations apply ohamoni --remote"
 	},
 	"dependencies": {
+		"@prisma/adapter-d1": "^6.5.0",
+		"@prisma/client": "6.5.0",
 		"lucide-react": "^0.483.0",
 		"next": "15.2.3",
 		"react": "^19.0.0",
@@ -27,6 +30,7 @@
 		"@types/react-dom": "^19",
 		"eslint": "^9",
 		"eslint-config-next": "15.2.3",
+		"prisma": "6.5.0",
 		"tailwindcss": "^4",
 		"typescript": "^5",
 		"wrangler": "^4.2.0"
