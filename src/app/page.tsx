@@ -34,7 +34,7 @@ export default async function Home() {
         <div className="container mx-auto px-4 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <AlarmClock className="h-6 w-6 text-blue-600" />
-            <span className="text-xl font-bold">おはよう日記</span>
+            <span className="text-xl font-bold">おはよう日記sabun</span>
           </div>
           <nav className="hidden md:flex gap-6">
             <Link
