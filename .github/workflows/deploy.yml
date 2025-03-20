@@ -9,6 +9,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+      - name: Install
++       run: yarn #　ここでinstallしないと後続でWrangler 3.90.0が使われてそのバージョンだと.jsoncじゃなくて.tomlなのでエラーになる
       - name: Build & Deploy Worker
         uses: cloudflare/wrangler-action@v3
         with:
