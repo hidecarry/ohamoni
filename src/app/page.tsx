@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { AlarmClock, Book, Calendar, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
