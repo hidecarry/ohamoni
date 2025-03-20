@@ -3,8 +3,8 @@ export const dynamic = 'force-dynamic';
 import { AlarmClock, Book, Calendar, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import prisma from "../../lib/prisma";
-import { createPrismaClientWithD1 } from "../../lib/prisma-d1";
+// import prisma from "../../lib/prisma";
+// import { createPrismaClientWithD1 } from "../../lib/prisma-d1";
 
 export interface Env {
   // If you set another name in the Wrangler config file for the value for 'binding',
