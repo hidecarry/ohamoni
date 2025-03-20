@@ -1,5 +1,6 @@
 import { AlarmClock, Book, Calendar, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import prisma from "../../lib/prisma";
 import { createPrismaClientWithD1 } from "../../lib/prisma-d1";
 
@@ -97,10 +98,12 @@ export default async function Home() {
             </div>
             <div className="flex items-center justify-center">
               <div className="relative h-[350px] w-[350px] sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px]">
-                <img
+                <Image
                   src="/placeholder.svg?height=450&width=450"
                   alt="おはよう日記アプリのイメージ"
                   className="w-full h-full object-contain"
+                  width={450}
+                  height={450}
                 />
               </div>
             </div>
