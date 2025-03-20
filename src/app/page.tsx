@@ -18,16 +18,16 @@ export default async function Home() {
   console.log("Using Prisma client");
 
   // Use the appropriate Prisma client based on the environment
-  const client =
-    process.env.NODE_ENV === "production" && process.env.DB
-      ? createPrismaClientWithD1(process.env.DB as unknown as D1Database)
-      : prisma;
-  const results = await client.customers.findMany({
-    where: {
-      CompanyName: "Bs Beverages",
-    },
-  });
-  console.log(results);
+  // const client =
+  //   process.env.NODE_ENV === "production" && process.env.DB
+  //     ? createPrismaClientWithD1(process.env.DB as unknown as D1Database)
+  //     : prisma;
+  // const results = await client.customers.findMany({
+  //   where: {
+  //     CompanyName: "Bs Beverages",
+  //   },
+  // });
+  // console.log(results);
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
