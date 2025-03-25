@@ -1,38 +1,27 @@
 {
-	"name": "ohamoni",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"deploy": "opennextjs-cloudflare && wrangler deploy",
-		"preview": "opennextjs-cloudflare && wrangler dev",
-		"cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
-		"migrate:prod": "npx wrangler d1 migrations apply ohamoni --remote"
-	},
-	"dependencies": {
-		"@prisma/adapter-d1": "^6.5.0",
-		"@prisma/client": "6.5.0",
-		"lucide-react": "^0.483.0",
-		"next": "15.2.3",
-		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
-	},
-	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20250319.0",
-		"@eslint/eslintrc": "^3",
-		"@opennextjs/cloudflare": "0.5.x",
-		"@tailwindcss/postcss": "^4",
-		"@types/node": "^20",
-		"@types/react": "^19",
-		"@types/react-dom": "^19",
-		"eslint": "^9",
-		"eslint-config-next": "15.2.3",
-		"prisma": "6.5.0",
-		"tailwindcss": "^4",
-		"typescript": "^5",
-		"wrangler": "^4.2.0"
-	}
+  "name": "ohamoni",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.2.4"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "@eslint/eslintrc": "^3"
+  }
 }
