@@ -3,7 +3,7 @@ FROM node:lts-alpine AS base
 # Stage 1: Install dependencies
 FROM base AS deps
 WORKDIR /app
-COPY package.json yarn-lock.yaml ./
+COPY package.json yarn.lock ./
 RUN yarn --frozen-lockfile
 
 # Stage 2: Build the application
