@@ -5,7 +5,8 @@ import { ArrowRight, Bell, Users, Award, Sun } from "lucide-react";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-white/95 backdrop-blur">
+      {/* Header */}
+      <header className="sticky top-0 z-40 w-full border-b bg-white shadow-sm backdrop-blur">
         <div className="container mx-auto px-4 flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <Sun className="h-6 w-6 text-orange-500" />
@@ -32,7 +33,7 @@ export default function Home() {
             </Link>
           </nav>
           <Link href="#register">
-            <button className="px-4 py-2 rounded-md bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors">
+            <button className="px-4 py-2 rounded-md bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors shadow-md">
               無料で始める
             </button>
           </Link>
@@ -46,7 +47,7 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-3xl font-bold sm:text-5xl xl:text-6xl/none">
                     毎朝の&quot;おはよう&quot;を共有しよう
                   </h1>
                   <p className="max-w-[600px] text-gray-600 md:text-xl">
@@ -78,7 +79,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
                   早起きSNSとは？
                 </h2>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
@@ -92,11 +93,11 @@ export default function Home() {
         {/* Features */}
         <section
           id="features"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+          className="w-full py-12 md:py-24 lg:py-32 bg-white"
         >
           <div className="container mx-auto px-4">
             <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
                 主な特徴
               </h2>
               <p className="max-w-[85%] text-gray-600 md:text-xl">
@@ -104,30 +105,36 @@ export default function Home() {
               </p>
             </div>
             <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3 lg:gap-8 mt-8">
-              <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 text-orange-500 mb-4">
-                  <Users className="h-6 w-6" />
+              <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-100 text-orange-500 mb-4">
+                  <Users className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold">仲間と励まし合える</h3>
-                <p className="text-gray-600 mt-2">
+                <h3 className="text-xl font-bold text-gray-900">
+                  仲間と励まし合える
+                </h3>
+                <p className="text-gray-700 mt-2">
                   一人では挫折しがちな早起きも、SNSで応援し合うから頑張れる
                 </p>
               </div>
-              <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
-                  <Bell className="h-6 w-6" />
+              <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4">
+                  <Bell className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold">シンプルな記録機能</h3>
-                <p className="text-gray-600 mt-2">
+                <h3 className="text-xl font-bold text-gray-900">
+                  シンプルな記録機能
+                </h3>
+                <p className="text-gray-700 mt-2">
                   ボタン一つで起床時間を投稿、余計な操作は不要
                 </p>
               </div>
-              <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
-                  <Award className="h-6 w-6" />
+              <div className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-6 shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-100 text-green-500 mb-4">
+                  <Award className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold">ゲーム感覚の達成感</h3>
-                <p className="text-gray-600 mt-2">
+                <h3 className="text-xl font-bold text-gray-900">
+                  ゲーム感覚の達成感
+                </h3>
+                <p className="text-gray-700 mt-2">
                   バッジや称賛コメントで「続けたい」気持ちを維持
                 </p>
               </div>
@@ -136,13 +143,13 @@ export default function Home() {
         </section>
 
         {/* App Screenshots */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
           <div className="container mx-auto px-4">
             <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl text-gray-900">
                 アプリの画面
               </h2>
-              <p className="max-w-[85%] text-gray-600 md:text-xl">
+              <p className="max-w-[85%] text-gray-700 md:text-xl">
                 シンプルで使いやすいインターフェースで、毎朝の報告が楽しくなります
               </p>
             </div>
@@ -199,11 +206,11 @@ export default function Home() {
         {/* Testimonials */}
         <section
           id="testimonials"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-50"
+          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
         >
           <div className="container mx-auto px-4">
             <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
                 ユーザーの声
               </h2>
               <p className="max-w-[85%] text-gray-600 md:text-xl">
@@ -243,7 +250,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
                   さあ、始めましょう
                 </h2>
                 <p className="mx-auto max-w-[700px] text-gray-600 md:text-xl">
@@ -259,7 +266,7 @@ export default function Home() {
                   />
                   <button
                     type="submit"
-                    className="w-full px-4 py-3 rounded-md bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors inline-flex items-center justify-center"
+                    className="w-full px-4 py-3 rounded-md bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors inline-flex items-center justify-center shadow-md"
                   >
                     無料で登録する
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -279,7 +286,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t border-gray-200 py-6 md:py-0">
+      <footer className="w-full border-t border-gray-200 py-6 md:py-0 bg-white">
         <div className="container mx-auto px-4 flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <div className="flex items-center gap-2">
             <Sun className="h-5 w-5 text-orange-500" />
