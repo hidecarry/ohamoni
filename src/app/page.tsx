@@ -233,8 +233,8 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t border-gray-200 py-6 md:py-0 bg-white">
-        <div className="container mx-auto px-4 flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+      <footer className="w-full border-t border-gray-200 py-6 bg-white">
+        <div className="container mx-auto px-4 flex justify-center items-center">
           <div className="flex items-center gap-2">
             <Sun className="h-5 w-5 text-orange-500" />
             <p className="text-sm text-gray-600">
