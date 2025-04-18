@@ -13,24 +13,6 @@ export default function Home() {
             <span className="text-xl font-bold">早起きSNS</span>
           </div>
           <nav className="hidden md:flex gap-6">
-            <Link
-              href="#features"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              特徴
-            </Link>
-            <Link
-              href="#testimonials"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              ユーザーの声
-            </Link>
-            <Link
-              href="#register"
-              className="text-sm font-medium hover:underline underline-offset-4"
-            >
-              登録する
-            </Link>
           </nav>
           <Link href="#register">
             <button className="px-4 py-2 rounded-md bg-orange-500 text-white font-medium hover:bg-orange-600 transition-colors shadow-md">
@@ -207,45 +189,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section
-          id="testimonials"
-          className="w-full py-12 md:py-24 lg:py-32 bg-gray-100"
-        >
-          <div className="container mx-auto px-4">
-            <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-                ユーザーの声
-              </h2>
-              <p className="max-w-[85%] text-gray-600 md:text-xl">
-                早起きSNSを使っている方々からの感想
-              </p>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
-              <div className="flex flex-col justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div>
-                  <p className="mb-4 italic">
-                    「このサービスのおかげで毎朝スッキリ起きられるようになりました！朝の時間を有効に使えるようになって、勉強の効率も上がりました。」
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold">大学生 Aさん</p>
-                </div>
-              </div>
-              <div className="flex flex-col justify-between rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
-                <div>
-                  <p className="mb-4 italic">
-                    「仲間がいると挫折しないって本当ですね。早起きが楽しくなりました！在宅ワークでも生活リズムが整い、仕事の効率が上がっています。」
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold">在宅ワーカー Bさん</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section
           id="register"
@@ -296,16 +239,7 @@ export default function Home() {
             <Sun className="h-5 w-5 text-orange-500" />
             <p className="text-sm text-gray-600">
               © {new Date().getFullYear()} 早起きSNS.
-              本サービスは現在ベータ版です。
             </p>
-          </div>
-          <div className="flex items-center">
-            <Link href="#register">
-              <button className="px-4 py-2 text-sm text-gray-700 hover:text-orange-600 inline-flex items-center">
-                無料で使ってみる
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </button>
-            </Link>
           </div>
         </div>
       </footer>
